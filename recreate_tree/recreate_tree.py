@@ -1,3 +1,9 @@
+###
+### Given an in-order and pre-order depth-first travesal of a tree with unique elements
+### recreate the tree.
+###
+
+
 def print_tree(node):
     if not node:
         return
