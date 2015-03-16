@@ -137,7 +137,7 @@ class Vector(Point):
 
 
 EulerDate = collections.namedtuple('EulerDate',
-                ['day', 'month', 'year', 'weekday'])
+                                   ['day', 'month', 'year', 'weekday'])
 
 
 def days_in_month(date):

@@ -1,9 +1,11 @@
-TARGET = 200
 DENOMINATIONS = [200, 100, 50, 20, 10, 5, 2, 1]
 seen = {}
 
 
 def find_solutions(target, max_coin=None):
+    """
+    Generator function for easier debugging
+    """
     if target == 0:
         return
     if max_coin is None:
@@ -22,6 +24,9 @@ def find_solutions(target, max_coin=None):
 
 
 def find_solution_count(target, max_coin=None):
+    """
+    Fast solution with result caching
+    """
     if target == 0:
         return 1
     if max_coin is None:
