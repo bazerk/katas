@@ -29,7 +29,7 @@ def generate_triangle_numbers():
         yield total
 
 
-def iterator_divisors(number):
+def iterator_divisors(number, include_self=False):
     yield 1
     for i in range(2, int(math.sqrt(number)) + 1):
         if (number % i) == 0:
@@ -37,6 +37,8 @@ def iterator_divisors(number):
             pair = number / i
             if pair != i:
                 yield pair
+    if include_self:
+        yield number
 
 
 def count_divisors(number):
