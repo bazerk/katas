@@ -9,7 +9,6 @@ How many circular primes are there below one million?
 """
 
 import euler
-import itertools
 
 
 def rotate(x):
