@@ -1,5 +1,6 @@
 import math
 import collections
+import itertools
 
 
 def total_primes(count):
@@ -17,6 +18,12 @@ def test_prime(number):
         if number % test == 0:
             return False
     return True
+
+
+def yield_primes(starting_from=2):
+    for i in itertools.count(starting_from):
+        if test_prime(i):
+            yield i
 
 
 def generate_triangle_numbers():
