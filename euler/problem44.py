@@ -36,13 +36,21 @@ def get_pentagonal(n):
 
 
 def problem44():
+    best_diff = None
+    best_n = None
     for n in itertools.count(2):
         pent_n = get_pentagonal(n)
         for m in xrange(1, n - 1):
             pent_m = get_pentagonal(m)
             diff = pent_n - pent_m
+            if best_diff is not None and diff > best_diff:
+                continue
             if is_pentagonal(pent_n + pent_m) and is_pentagonal(diff):
-                return diff
+                if best_diff is None or diff < best_diff:
+                    best_n = n
+                    best_diff = diff
+        if best_diff is not None and (n - 1) > best_n:
+            return best_diff
     raise ValueError
 
 
