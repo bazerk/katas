@@ -22,7 +22,7 @@ import math
 
 MAX_VALUE = 1000000
 DISTINCT = 4
-primes = euler.generate_primes_by_eratosthenes(1000000)
+primes = euler.generate_primes_by_eratosthenes(MAX_VALUE)
 primes_set = set(primes)
 
 prime_factors = {}
