@@ -24,7 +24,7 @@ MAX_VALUE = 100000
 
 
 def problem46():
-    primes = sorted(euler.generate_primes_by_eratosthenes(MAX_VALUE))
+    primes = euler.generate_primes_by_eratosthenes(MAX_VALUE)
     prime_set = set(primes)
     for tst in itertools.count(9, 2):
         if tst > MAX_VALUE:
